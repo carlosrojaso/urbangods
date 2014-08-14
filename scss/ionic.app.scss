@@ -1,0 +1,239 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #4a87ee !default;
+$calm:                            #43cee6 !default;
+$balanced:                        #66cc33 !default;
+$energized:                       #f0b840 !default;
+$assertive:                       #ef4e3a !default;
+$royal:                           #8a6de9 !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+$darkgrey: #283539;
+
+$lightgrey: transparentize(#D8D8D8, 0.8);
+
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
+
+.gradient_bg {
+  background: -moz-linear-gradient(top,  #f67528 0%, #f67528 22%, #ffe14c 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f67528), color-stop(22%,#f67528), color-stop(100%,#ffe14c)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #f67528 0%,#f67528 22%,#ffe14c 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #f67528 0%,#f67528 22%,#ffe14c 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #f67528 0%,#f67528 22%,#ffe14c 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #f67528 0%,#f67528 22%,#ffe14c 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f67528', endColorstr='#ffe14c',GradientType=0 ); /* IE6-9 */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f67528; /* Old browsers */
+}
+body, .pane, .panel {
+    @extend .gradient_bg;
+}
+
+.leftmenu {
+  background: #283539;
+  .link a {
+    font-size: 35px;
+    font-weight: 100;
+    color: white;
+    background: #283539;
+    padding: 20px 0;
+  }
+}
+
+.loginpanel {
+  background-image: url('../img/sunset.png');
+  width: 100%;
+  position: relative;
+//  top: 0px;
+//  left: 0px;
+  height: 1024px;
+//  bottom: 0px;
+//  right: 0px;
+  background-position: bottom center;
+  background-size: cover;
+  h1 {
+    position: absolute;
+    top: 35%;
+    color: white;
+    font-weight: 100;
+    right: 10px;
+    font-size: 60px;
+  }
+  button {
+    position: absolute;
+    width: 80%;
+    margin: 0 10%;
+    height: 50px;
+    background: #3B5998 !important;
+    top: 75%;
+    border: 1px solid white;
+    border-radius: 3px;
+    img {
+      height: 85%;
+      margin: 0 10px;
+    }
+  }
+}
+.profile {
+  h2 , h3{
+    color: white;
+    font-size: 40px;
+    font-weight: 100;
+    text-align: center;
+  }
+  h3 {
+   font-size: 30px;
+  }
+  
+  // MENU
+  body {
+    background: #39D;
+  }
+
+  .circular-menu {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .circle {
+    width: 280px;
+    height: 280px;
+    opacity: 0;
+
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+  }
+
+  .open.circle {
+    opacity: 1;
+    background: white;
+    border-radius: 50%;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .circle a {
+    text-decoration: none;
+    color: #CECECE;
+    display: block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+    position: absolute;
+    text-align: center;
+
+  }
+
+  .circle a:hover {
+    color: #eef;
+  }
+
+  .menu-button {
+    position: absolute;
+    top: 64px;
+    left: calc(50% - 73px);
+    text-decoration: none;
+    text-align: center;
+    color: #444;
+    border-radius: 50%;
+    display: block;
+    height: 150px;
+    width: 150px;
+    line-height: 0;
+    padding: 0;
+    background: #dde;
+    overflow: hidden;
+    border: 5px solid #1CA631;
+    img {
+    }
+  }
+
+  .menu-button:hover {
+    background-color: #eef;
+  }
+
+  /* Author stuff */
+  h1.author {
+    text-align:center;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+  }
+
+  .logout {
+    position: fixed;
+    bottom: 0px;
+  }
+  .awards {
+    width: 100%; 
+    height: 46%; 
+    position: fixed; 
+    bottom: 40px;
+    background: $darkgrey;
+    .award {
+      clear: both;
+      width: 100%;
+      color: white;
+      &:nth-child(even) {
+        background: $lightgrey;
+      }
+      .left {
+        width: 30%;
+        float: left;
+        line-height: 100%;
+        height: 100%;
+        padding: 13px 6px 0px;
+        font-size: 18px;
+        position: relative;
+        img {
+          position: absolute;
+          right: 4px;
+          top: 4px;
+          margin: 4px;
+          border-radius: 50%;
+        }
+      }
+      .text {
+        width: 69%;
+        float: left;
+        color: white;
+        h4 {
+          color: inherit;
+        }
+      }
+      &:after {
+        display: block;
+        content: "  ";
+        height:2px;
+        width: 100%;
+        cleaR: both;
+      }
+    }
+  }
+}

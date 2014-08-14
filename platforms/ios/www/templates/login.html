@@ -1,0 +1,26 @@
+<div>
+  <section class='loginpanel' data-ng-hide='user.auth'>
+    <div class=''>
+      <h1>Olympus</h1>
+      <button class="button button-full  button-positive" data-ng-click='loginWithFacebook()'>
+        <img class='fblogo' src='/img/fb.png' />Login
+      </button>
+    </div>
+  </section>
+
+
+  <section class='profile' >
+    <h2>Track Hermes</h2>
+
+    <div class=''>
+      <img ng-src='{{user.picture}}' />
+      <h2 data-ng-bind='user.data.displayName'></h2>
+
+      <button class="button button-full  button-positive" data-ng-click='logout()'>
+        Logout
+      </button>
+
+    </div>
+  </section>
+
+</div>
